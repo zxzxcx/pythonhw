@@ -1,0 +1,75 @@
+
+
+# 1. 각 회차별 n의 배수의 개수 (2, 3, 5, 7)의 배수
+# 2. 홀 / 짝 개수
+# 3. 평균값, 최댓값, 최솟값
+
+nums = [[5, 7, 12, 20, 25, 26], [30, 31, 34, 39, 41, 45], [10, 16, 19, 27, 37, 38], [4, 8, 22, 26, 32, 38], [1, 9, 10, 13, 35, 44]]
+
+#1
+while True:
+    numN = input('개수를 구할 n의 배수를 입력하세요 : ')
+    if numN.isdigit():
+        numN = int(numN)
+        break
+    else:
+        print('숫자만 입력해 주세요')
+
+totalCntN = 0
+totalCntEven = 0
+totalCntOdd = 0
+totalLottoSum = 0
+totalLottoAvg = 0
+totalLottoMax = 0
+totalLottoMin = 46
+
+for i in range(0, len(nums)):
+    cntN = 0
+    cntEven = 0
+    cntOdd = 0
+    lottoSum = 0
+    lottoAvg = 0
+    lottoMax = 0
+    lottoMin = 46
+    for j in range(0, len(nums[i])):
+        #n의 배수 카운트
+        if nums[i][j] % numN == 0:
+            cntN += 1
+        lottoSum += nums[i][j]
+        #짝수 홀수 카운트
+        if nums[i][j] % 2 == 0:
+            cntEven += 1
+        else:
+            cntOdd += 1
+        #최대 최소
+        if nums[i][j] > lottoMax:
+            lottoMax = nums[i][j]
+        if nums[i][j] < lottoMin:
+            lottoMin = nums[i][j]
+        #평균
+    lottoAvg = lottoSum / 6
+
+    totalCntN += cntN
+    totalCntEven += cntEven
+    totalCntOdd += cntOdd
+    totalLottoSum += lottoSum
+    totalLottoAvg = totalLottoSum / (len(nums) * 6)
+    if lottoMax > totalLottoMax:
+        totalLottoMax = lottoMax
+    if lottoMin < totalLottoMin:
+        totalLottoMin = lottoMin
+
+    #각 회차별 출력
+    print(f'{i + 1} 회차 {numN}의 배수의 숫자 개수 : {cntN}개')
+    print(f'{i + 1} 회차 짝수의 숫자 개수 : {cntEven}개')
+    print(f'{i + 1} 회차 홀수의 숫자 개수 : {cntOdd}개')
+    print(f'{i + 1} 회차 평균값 : {lottoAvg}')
+    print(f'{i + 1} 회차 최댓값 : {lottoMax}번')
+    print(f'{i + 1} 회차 최솟값 : {lottoMin}번', end = '\n\n')
+    
+print(f'총 {len(nums)}회차 입력 {numN}의 배수 {totalCntN}개')
+print(f'총 {len(nums)}회차 짝수 {totalCntEven}개')
+print(f'총 {len(nums)}회차 홀수 {totalCntOdd}개')
+print(f'총 {len(nums)}회차 평균값 : {totalLottoAvg}')
+print(f'총 {len(nums)}회차 최댓값 : {totalLottoMax}번')
+print(f'총 {len(nums)}회차 최솟값 : {totalLottoMin}번')
