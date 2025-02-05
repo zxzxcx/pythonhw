@@ -11,6 +11,8 @@ else:
     number = int(number)
     if number < 1:
         print('자연수가 아닙니다.')
+    elif number == 1:
+        print('1입니다. 1은 소수가 아닙니다')
     else:
         print('소수인가? ', check_prime_num(number))
 
