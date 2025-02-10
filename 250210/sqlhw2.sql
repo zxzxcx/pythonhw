@@ -22,7 +22,7 @@ select * from students;
 select name, age from students where grade = 'A';
 
 #3.
-delete from students where name = 'Bob';
+delete from students where name = 'Dave';
 select * from students;
 
 #4.
