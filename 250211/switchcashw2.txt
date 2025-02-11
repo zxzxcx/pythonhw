@@ -1,0 +1,35 @@
+#include <stdio.h>
+
+void main()
+{
+    int score = 0;
+    
+    printf("시험점수를 정수를 입력하세요\n");
+    scanf("%d", &score);
+    switch(score/10)
+    {
+        case 10: case 9:
+            printf("A\n");
+            printf("보너스가 10%%입니다 score : %f\n", score * 1.1);
+            break;
+        case 8:
+            printf("B\n");
+            printf("보너스가 5%%입니다 score : %f\n", score * 1.05);
+            break;
+        case 7:
+            printf("C\n");
+            printf("보너스가 없습니다 score : %d\n", score);
+            break;
+        case 6:
+            printf("D\n");
+            printf("보너스가 없습니다 score : %d\n", score);
+            break;
+        case 5: case 4: case 3: case 2: case 1: case 0:
+            printf("F\n");
+            printf("보너스가 없습니다 score : %d\n", score);
+            break;
+        default:
+            printf("잘못된 입력입니다!\n");
+    }
+printf("프로그램 종료");
+}

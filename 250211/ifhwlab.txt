@@ -1,0 +1,39 @@
+/*
+어떤 숫자가 다음 조건 중 하나라도 만족하면 특별한 숫자라고 판단한다.
+1. 숫자가 3의 배수이면서 홀수이다.
+2. 숫자의 각 자리 숫자의 합이 7의 배수이다.
+3. 숫자의 첫 번째 자리 숫자가 마지막 자리 숫자보다 크다.
+(숫자의 입력값은 0부터 999까지의 제한한다)
+*/
+#include <stdio.h>
+
+void main()
+{
+    int num = 98; //<0~999
+
+    int special = 0;
+    
+    if ( num % 3 == 0 && num % 2 == 1)
+    {
+        special = 1;
+    }
+    if ( ((num / 100) + (num % 100 / 10) + num % 10) % 7 == 0)
+    {
+        special = 1;
+    }
+    if (( (num / 100) > num % 10))
+    {
+        special = 1;
+    }
+    if (num / 100 == 0 &&(num % 100 / 10) > num % 10)
+    {
+       special = 1;
+    }
+    if (special == 1)
+    {
+        printf("special number");
+    } else {
+        printf("not special number");
+    }
+    
+}

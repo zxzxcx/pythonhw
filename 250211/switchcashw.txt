@@ -1,0 +1,45 @@
+#include <stdio.h>
+
+void main()
+{
+    int a = 0;
+    
+    printf("0 ~ 9사이의 정수를 입력하세요\n");
+    scanf("%d", &a);
+    switch(a)
+    {
+        case 0:
+            printf("0 -> A\n");
+            break;
+        case 1:
+            printf("1 -> B\n");
+            break;
+        case 2:
+            printf("2 -> C\n");
+            break;
+        case 3:
+            printf("3 -> D\n");
+            break;
+        case 4:
+            printf("4 -> E\n");
+            break;
+        case 5:
+            printf("5 -> F\n");
+            break;
+        case 6:
+            printf("6 -> G\n");
+            break;
+        case 7:
+            printf("7 -> H\n");
+            break;
+        case 8:
+            printf("8 -> I\n");
+            break;
+        case 9:
+            printf("9 -> J\n");
+            break;
+        default:
+            printf("잘못된 입력입니다!\n");
+    }
+printf("프로그램 종료");
+}
