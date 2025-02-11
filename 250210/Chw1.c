@@ -19,11 +19,8 @@ void main()
     if (c == 0)
     {
         printf("오류발생 : 0으로 나눌 수 없습니다 세 번째 정수는 0이 아닌 정수로 넣어주세요\n");
-    } else
-    {
-        
-        result = (a + b) * c - (a - b) / (float)c;
-        
+    } else {  
+        result = (a + b) * c - (a - b) / (float)c;     
         printf("result : (%d + %d) * %d - (%d - %d) / %d = %f\n", a, b, c, a, b, c, result);
     }
 
