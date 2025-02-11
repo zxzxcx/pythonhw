@@ -13,9 +13,14 @@ void main()
     int A, B;
     printf("정수 A를 입력하세요\n");
     scanf("%d", &A);
-    printf("정수 B를 입력하세요\n");
+    printf("0이아닌 정수 B를 입력하세요\n");
     scanf("%d", &B);
     
+    if (B == 0)
+    {
+        printf("0이아닌 정수 B를 입력해주세요");
+        exit(1);
+    }
     if (A % B ==0)
     {
         printf("1조건에 해당 A : %d B : %d", A / B);    
@@ -27,4 +32,5 @@ void main()
         printf("아무것도 해당되지 않는다 A : %d B : %d", A, B);
     }
     
+    printf("%d", 5 % 0);
 }
