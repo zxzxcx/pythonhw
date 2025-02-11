@@ -22,9 +22,9 @@ void main()
     } else
     {
         
-        result = (a + b) * c - (a - b) / c;
+        result = (a + b) * c - (a - b) / (float)c;
         
-        printf("result : (%d +%d) * %d - (%d - %d) / %d = %f\n", a, b, c, a, b, c, result);
+        printf("result : (%d + %d) * %d - (%d - %d) / %d = %f\n", a, b, c, a, b, c, result);
     }
 
     
