@@ -8,10 +8,10 @@ create table students(
 );
 
 
-insert into students(name, age, grade) values( 'Alice', 20, 'A');
-insert into students(name, age, grade) values( 'Bob', 22, 'B');
-insert into students(name, age, grade) values( 'Charlie', 21, 'A');
-insert into students(name, age, grade) values( 'Dave', 23, 'C');
+insert into students(name, age, grade) values('Alice', 20, 'A');
+insert into students(name, age, grade) values('Bob', 22, 'B');
+insert into students(name, age, grade) values('Charlie', 21, 'A');
+insert into students(name, age, grade) values('Dave', 23, 'C');
 
 
 #1.
