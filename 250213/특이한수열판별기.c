@@ -27,7 +27,8 @@ void main()
             
             if (one_number == 7)
             {
-                seven_In = 1;    
+                seven_In = 1;
+                break;
             }
             if (num / 10 == 0){
                 break;
