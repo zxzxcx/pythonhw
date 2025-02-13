@@ -9,8 +9,8 @@ void main()
     
     for ( int i = 0; i < n_Height + 1; i ++)
     {
-        //j만큼 공백을 발생하는 for문
-        for (int j = n_Height - i; j > 0; j --)
+        //높이 - i 만큼 공백을 발생하는 for문
+        for (int j = 0; j < n_Height - i; j ++)
         {
             printf("  ");
         }
