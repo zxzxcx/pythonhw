@@ -14,7 +14,7 @@ void main() {
 	printf("\n");
 	for (int j = 0 ; j < 5; j++)
 	{
-		int temp_Min = 99999;
+		int temp_Min = arr1[j];
 		int temp_Index;
 		for (int i = j ; i < 5; i++)
 		{
