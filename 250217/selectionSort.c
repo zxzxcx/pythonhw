@@ -6,6 +6,12 @@ void main() {
 	int * p;
 	p = arr1;
 	
+	printf("unsorted array : ");
+	for (int i = 0; i < 5; i++)
+		{
+			printf("%d ", *(p + i));
+		}
+	printf("\n");
 	for (int j = 0 ; j < 5; j++)
 	{
 		int temp_Min = 99999;
