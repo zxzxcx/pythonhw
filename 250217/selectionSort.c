@@ -1,8 +1,10 @@
-//선택정렬
+//선택정렬 포인터
 #include <stdio.h>
 
 void main() {
 	int arr1[5] = {64, 25, 12, 22, 11};
+	int * p;
+	p = arr1;
 	
 	for (int j = 0 ; j < 5; j++)
 	{
@@ -10,25 +12,23 @@ void main() {
 		int temp_Index;
 		for (int i = j ; i < 5; i++)
 		{
-			if (arr1[i] < temp_Min)
+			if (*(p + i) < temp_Min)
 			{
-				temp_Min = arr1[i];
+				temp_Min = *(p + i);
 				temp_Index = i;
 			}			
 		}
 		
-		arr1[temp_Index]	= arr1[j];
-		arr1[j] = temp_Min;
+		*(p + temp_Index)	= *(p + j);
+		*(p + j) = temp_Min;
 			
 		printf("%d step : ", j + 1);
 		
 		for (int i = 0; i < 5; i++)
 		{
-			printf("%d ", arr1[i]);
+			printf("%d ", *(p + i));
 		}
 		printf("\n");
 	}
 
 }
-
-
