@@ -14,7 +14,7 @@ void main()
     enum car c;
     char car_str[20];
 
-    printf("Write car type (SEDAN, SUV, TRUCK, VAN), (AVANTE, SANTAFE): \n");
+    printf("Write car type (SEDAN, SUV, TRUCK, VAN), (AVANTE, SANTAFE, POTER, DAMAS): \n");
     scanf("%s", car_str);
 
     // 문자열에 맞는 차종을 선택
@@ -30,13 +30,13 @@ void main()
         c = SUV;
         printf("Enum value: %d\n", c);
     }
-    else if (strcmp(car_str, "TRUCK") == 0)
+    else if (strcmp(car_str, "TRUCK") == 0 || strcmp(car_str, "POTER") == 0)
     {
         printf("TRUCK\n");
         c = TRUCK;
         printf("Enum value: %d\n", c);
     }
-    else if (strcmp(car_str, "VAN") == 0)
+    else if (strcmp(car_str, "VAN") == 0 || strcmp(car_str, "DAMAS") == 0)
     {
         printf("VAN\n");
         c = VAN;
