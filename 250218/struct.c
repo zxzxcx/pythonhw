@@ -21,5 +21,5 @@ void main()
 	
 	printf("%s\n", s1.name);
 	printf("%d\n", s1.age);
-  printf("%c\n", s1.grade);
+  	printf("%c\n", s1.grade);
 }
